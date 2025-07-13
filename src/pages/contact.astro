@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <HeroText title="Register Today!" />
+
+  <ContactUs
+    id="form"
+    title="Contact Form"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'I acknowledge and allow Unitee Labs to contact me via provided infomation.',
+    }}
+    description="Our support team typically responds within 24 to 48 business hours."
+  />
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'General support',
+        description: `Chat with us for inquiries related to account management, app navigation, payment issues or general questions about the software functionality.`,
+      },
+      {
+        title: 'Contact sales',
+        description:
+          'Email us for questions about purchases, pricing options, licensing for commercial use, inquiries about customizations, etc.',
+      },
+      {
+        title: 'Technical support',
+        description:
+          'Chat with us when facing issues like crashes, glitches, configuration difficulties, compatibility issues with software or download errors, or other technical challenges',
+      },
+      {
+        title: 'Chat',
+        description: 'Coming soon!',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'support@uniteelabs.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Located in',
+        description: 'USA',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>
