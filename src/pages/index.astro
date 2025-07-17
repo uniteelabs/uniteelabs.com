@@ -1,0 +1,224 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+// import Content from '~/components/widgets/Content.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Unitee Labs',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: getPermalink('/contact'),
+        target: '_blank',
+        icon: 'tabler:send',
+      },
+      { text: 'Learn more', href: '#benefits' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Place Holder Image' }}
+  >
+    <Fragment slot="title">
+      Unitee Labs
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Unitee Labs</span> is a software company, building extensible and production ready applications focused on community management & engagement.</span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Unitee Labs: Community Management and Engagement Apps.</span>
+      Suitable for all types of organizations such as, Education Institutions, Resident Communities, Clubs & Non Profits.
+    </Fragment>
+  </Hero>
+
+  <Note title="Our Philosophy:" description="Functionality, Simplicity and Privacy" />
+
+  <Features
+    id="benefits"
+    title="Why Unitee Labs Software"
+    subtitle="Possess several key characteristics to effectively cater to the needs of organizations."
+    columns={3}
+    items={[
+      {
+        title: 'Modern and Professional Design',
+        description:
+          'Has a contemporary design that reflects current design trends and gives a professional impression.',
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Responsive and Mobile-Friendly',
+        description: 'Adapts seamlessly to different screen sizes and devices to ensure a consistent user experience.',
+        icon: 'tabler:picture-in-picture',
+      },
+      {
+        title: 'Customizability',
+        description:
+          'Easily customizable, allowing organizations to adapt the design, colors, and content to match their brand identity.',
+        icon: 'tabler:adjustments-horizontal',
+      },
+      {
+        title: 'Fast Performance',
+        description: 'Optimized for speed to ensure a smooth user experience without delays or lags.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Ease of Use',
+        description:
+          'Incorporate UX best practices in app design and structure to improve ease of use and navigation for users.',
+        icon: 'tabler:arrow-big-right',
+      },
+      {
+        title: 'Compatibility',
+        description: 'Works well across different devices and dimensions, ensuring accessibility for all users.',
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Elevate Your Organization"
+    subtitle="Provides top-notch features for all types of organizations to reach their goals."
+    tagline="Benefits"
+    items={[
+      {
+        title: 'Offical Branding',
+        description:
+          "Have an official app with your logo and colors, to represent your brand/organization professionally.",
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Utility Focused',
+        description:
+          'Focuses on providing essential features that enhance user experience, without unnecessary complexity.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Affordable Pricing',
+        description: 'Offers competitive pricing plans that provide, making it accessible to a wide range of organizations.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <Steps
+    id="steps"
+    title="Get your mobile application up and running in no time with Unitee Labs."
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Register</span>',
+        description:
+          "Register your organization! Just click the contact us button and answer the basic questions about your organization. After a quick verification, you'll have a new account ready for customization.",
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Customize</span>',
+        description:
+          "Pour your vision into it. Add groups, images, text, and all that jazz to breathe life into your digital space. Remember, you can always change these settings later, so feel free to experiment.",
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Announce</span>',
+        description:
+          "Let your community know about your new application! Simply share your invitation code with the community members. You can always customize your invitation codes to auto join specific groups, and to expire at a certain date and time",
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <FAQs
+    id="faqs"
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that Unitee Labs offers and how it can elevate your community."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why Unitee Labs?',
+        description:
+          "Unitee Labs is a software company that specializes in building extensible and production-ready applications focused on community management and engagement. Our apps are designed to be user-friendly, customizable, and affordable, making them suitable for all types of organizations.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'To get started, you need to register your organization by clicking the "Register" button. After a quick verification, you will have a new account ready for customization. You can then customize your app with your organization\'s branding and features.',
+      },
+      {
+        title: 'How can I customize my app?',
+        description:
+          "You can customize your app by adding groups, events, announcements, and other content to reflect your organization's identity. The app is designed to be user-friendly, allowing you to easily make changes and updates as needed.",
+      },
+      {
+        title: "How do I invite my community members?",
+        description:
+          "You can invite your community members by sharing your unique invitation code. This code allows them to join your app and access the features you have set up. You can customize your invitation codes to auto-join specific groups and set expiration dates.",
+      },
+      {
+        title: 'What if I need help?',
+        description:
+          'If you need assistance, you can reach out to our support team through the "Contact Us" button. We are here to help you with any questions or issues you may have while using our apps.',
+      },
+      {
+        title: 'What are the pricing plans?',
+        description:
+          "We offer competitive pricing plans that provide value for money. You can choose a plan that suits your organization's needs and budget. For more details, please refer to the pricing section on our website.",
+      },
+    ]}
+  />
+
+  <Stats
+    id="stats"
+    subtitle="Place Holder Stats Until We Have Real Data :)"
+    stats={[
+      { title: 'Downloads', amount: '132K', icon: 'tabler:download' },
+      { title: 'Organizations', amount: '12.4K', icon: 'tabler:building' },
+      { title: 'Users', amount: '52.4K', icon: 'tabler:users' }
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '#',
+        target: '_blank',
+        icon: 'tabler:send',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Register&nbsp;your&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Organization Today!</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Provide basic information about your organization, and one of our team members will help you get started!
+    </Fragment>
+  </CallToAction>
+</Layout>
