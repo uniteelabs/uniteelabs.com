@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Prices from '~/components/widgets/Pricing.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -15,11 +14,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-
-  <HeroText
-    title="Mentor App"
-    subtitle="Easy to Use and Minimalist Community Management and Engagement App"
-  />
+  <HeroText title="Mentor App" subtitle="Easy to Use and Minimalist Community Management and Engagement App" />
 
   <Features
     id="features"
@@ -115,7 +110,7 @@ const metadata = {
       {
         title: 'basic',
         subtitle: 'Optimal choice for small clubs',
-        price: ".",
+        price: '.',
         period: 'per month',
         items: [
           {
@@ -137,7 +132,7 @@ const metadata = {
       {
         title: 'standard',
         subtitle: 'Optimal choice for small organizations',
-        price: "..",
+        price: '..',
         period: 'Per Month',
         items: [
           {
@@ -164,7 +159,7 @@ const metadata = {
       {
         title: 'premium',
         subtitle: 'Optimal choice for professional organizations',
-        price: "...",
+        price: '...',
         period: 'Per Month',
         items: [
           {
