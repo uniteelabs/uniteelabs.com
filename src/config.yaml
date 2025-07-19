@@ -23,8 +23,8 @@ metadata:
     #     height: 628
     type: website
   twitter:
-    handle: '@uniteelabs'
-    site: '@uniteelabs'
+    handle: '@UniteeLabs'
+    site: '@UniteeLabs'
     cardType: summary_large_image
 
 i18n:

@@ -107,9 +107,9 @@ export const footerData = {
     { text: 'Privacy Policy', href: '#' },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'X/Twitter', icon: 'tabler:brand-x', href: 'https://x.com/UniteeLabs' },
+    // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/uniteelabs' },
   ],
   footNote: '© 2025 Unitee Labs. All rights reserved.',
